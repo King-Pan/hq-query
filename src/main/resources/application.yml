@@ -1,0 +1,18 @@
+
+
+
+custom:
+  defineId: phoneNo
+  address: http://10.25.176.136:18088/drquery.service-3.0/services/Axis2ServerAdaptor
+  ip: 10.25.124.111
+  sensitive: true
+  operType: aesencrypt
+  addressOldName: 武汉服务集群
+  isTesting: true
+  restUrl: http://10.31.100.19/dataos/open/datams/sign/sensitiveTranslate.json
+  port: 8090
+  addressName: 襄阳服务集群
+  dataSource: hive2
+  addressOld: http://10.25.176.148:18888/drquery.service-3.0/services/Axis2ServerAdaptor
+  user: T0000
+  key: 8287qafva1oj387
