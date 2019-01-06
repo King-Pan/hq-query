@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "custom")
 public class ConfigInfo {
-    private String isSensitive = "false";
+    private Boolean isSensitive = false;
     private String address = "";
     private String addressOld = "";
     private String addressName = "";

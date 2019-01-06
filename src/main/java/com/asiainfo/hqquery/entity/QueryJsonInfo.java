@@ -1,18 +1,20 @@
 package com.asiainfo.hqquery.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 /**
  * @author king-pan
- * @date 2018/12/17
- * @Description 前台服务参数实体
+ * @date 2019/1/5
+ * @Description 查询drquery参数信息
  */
 @Data
-public class JsonDetail {
+public class QueryJsonInfo {
     /**
      * 电话号码
      */
     private String phoneNo;
+
     /**
      * 开始时间
      */
@@ -45,5 +47,17 @@ public class JsonDetail {
      * 调用系统
      */
     private String srcSystemCode;
+    /**
+     * 接口类型
+     */
+    private String interfaceType;
+    /**
+     * 查询id = 当前时间 + 加密后的手机号码
+     */
+    private String qryId;
 
+    /**
+     * 接口类型
+     */
+    private String type;
 }
