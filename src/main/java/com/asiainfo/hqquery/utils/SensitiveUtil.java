@@ -1,9 +1,9 @@
 package com.asiainfo.hqquery.utils;
 
+import com.alibaba.fastjson.JSONObject;
 import com.asiainfo.dacp.sdk.HttpHelper;
 import com.asiainfo.hqquery.entity.ConfigInfo;
 import lombok.extern.slf4j.Slf4j;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -38,7 +38,7 @@ public class SensitiveUtil {
             phoneList.add(phoneNo);
             crypt.put("content", phoneList);
             String result = HttpHelper.post(configInfo.getUser(), configInfo.getKey(), configInfo.getRestUrl(), crypt);
-            JSONObject resultJson = JSONObject.fromObject(result);
+            JSONObject resultJson = JSONObject.parseObject(result);
             List<String> resultList = new ArrayList<>();
             resultList = (List<String>) resultJson.get("toContent");
             sensitivePhoneNo = resultList.get(0);
